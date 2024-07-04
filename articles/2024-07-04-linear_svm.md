@@ -1,8 +1,8 @@
 ---
 title: "SVMをシンプルに実装する"
-emoji: "💨"
-type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Python", "SVM", "機械学習", "Tech", "数理最適化"]
+emoji: "📝"
+type: "Tech" # tech: 技術記事 / idea: アイデア
+topics: ["Python", "SVM", "機械学習", "数理最適化"]
 published: false
 ---
 
@@ -49,7 +49,7 @@ $$\min_w{||\bm{w}||^2} \quad \text{s.t.} \quad y_i (\bm{w}^\top \bm{x}_i) \ge 1$
 ### ソフトマージンSVMの主問題
 一般にデータセットが線形分離可能であることは少ないです．そのため，$\xi$だけ分類境界からの誤差を許容するようにハードマージンSVMを一般化した手法を[ソフトマージンSVM](https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%9E%E3%82%B7%E3%83%B3#%E3%82%BD%E3%83%95%E3%83%88%E3%83%9E%E3%83%BC%E3%82%B8%E3%83%B3)と呼びます．
 
-定数$C \in \mathbb{R}$として，ソフトマージンSVMの主問題は次のように表せます．
+定数$\lambda \in \mathbb{R}$として，ソフトマージンSVMの主問題は次のように表せます．
 $$\min_w{\frac{\lambda}{2}||\bm{w}||^2 + \frac{1}{n}\sum^n_{i=1}\xi_i} \quad \text{s.t.} \quad \xi_i \ge 0, \quad \bm{y}_i(\bm{w}^\top\bm{x_i}) \ge 1 - \xi_i$$
 
 ### ソフトマージンSVMと経験リスク最小化
@@ -75,7 +75,7 @@ $$\bm{w}^{(t)} = \bm{w}^{(t-1)} - \eta \nabla R(\bm{w}^{(t-1)})$$
 ここで，経験リスク$R$の(劣)勾配は次のように計算することができます．
 $$\nabla R(\bm{w}) = \lambda \bm{w} + \frac{1}{n} \sum^n_{i=1}\begin{cases} -y_i\bm{x_i} &\text{if } 1-y_i(\bm{w}^\top \bm{x_i}) \ge 0 \\ 0 &\text{otherwise}\end{cases}$$
 
-## 線形SVMの実装
+## ソフトマージンSVMの実装
 ### 単純な実装
 さて，実装としては，**ソフトマージンSVMと最急降下法**の部分をプログラムに書き起こせば良いことになります．
 
@@ -281,5 +281,5 @@ plt.plot(X[:, 0], - (w[0] * X[:, 0] + w[2]) / w[1])
 ![dataset_moon](/images/2024-07-04-linear_svm/dataset_moon.png)
 正解率は```ACC: 0.896```とそこまで悪くはありませんが，実際の分類境界を見ると，データセットの分布に沿った境界にはなっていません．
 
-このように，上で扱った1次関数で分離するSVMでは限界があります．
-この限界を解消するために，カーネル関数を用いたSVMがあります．この実装は次回の記事で紹介したいと思います．
+このように，上で扱った1次関数で分離するSVM(線形SVM)では限界があります．
+この限界を解消するために，カーネル関数を用いたSVM(カーネルSVM)があります．この実装は次回の記事で紹介したいと思います．
