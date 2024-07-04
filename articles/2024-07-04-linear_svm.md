@@ -1,5 +1,5 @@
 ---
-title: "SVMをシンプルに実装する"
+title: "線形SVMをシンプルに実装する"
 emoji: "📝"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Python", "SVM", "機械学習", "数理最適化"]
