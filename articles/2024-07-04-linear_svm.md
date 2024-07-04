@@ -246,9 +246,8 @@ print(f"ACC: {accuracy_score(y_test, preds)}")
 # ACC: 0.936
 
 plt.figure(figsize=(8, 7))
-
 plt.scatter(X[:, 0], X[:, 1], marker='o', c=y, s=25, edgecolor='k')
-
+w = model._w
 # w0*x + w1*y + w2 = 0
 # y = - (w0*x + w2) / w1
 plt.plot(X[:, 0], - (w[0] * X[:, 0] + w[2]) / w[1])
