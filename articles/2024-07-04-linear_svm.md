@@ -131,7 +131,7 @@ n_iters = 5000
 # weights
 w = np.ones((X.shape[1]))
 
-# gradient decent
+# gradient descent
 for i in range(n_iters):
     w = w - learning_rate * dR(w)
     if (i + 1) % 1000 == 0:
@@ -199,7 +199,7 @@ class LinearSVM:
         # weights
         w = np.ones((X.shape[1]))
 
-        # gradient decent
+        # gradient descent
         for i in range(self.n_iters):
             w = w - self.learning_rate * self._empirical_risk_grad(X, y, w)
             if self.verbose and (i + 1) % 1000 == 0:
