@@ -1,9 +1,9 @@
 ---
 title: "SVMをシンプルに実装する"
 emoji: "📝"
-type: "Tech" # tech: 技術記事 / idea: アイデア
+type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Python", "SVM", "機械学習", "数理最適化"]
-published: false
+published: true
 ---
 
 ## TL;DR
@@ -13,6 +13,8 @@ published: false
 
 ## 本記事が実装するSVM
 2クラス分類を行う，ソフトマージンSVMの実装を行います．
+実装はこちらにあります．
+@[card](https://github.com/obizip/SVM)
 カーネル関数を取り入れたソフトマージンSVMは次回実装します．
 
 ## SVMのざっくりとした理論
