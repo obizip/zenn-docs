@@ -39,6 +39,7 @@ $$f(\bm{x}) = \bm{w}^\top \bm{x} + b = \tilde{\bm{w}}^\top \tilde{\bm{x}}$$
 と簡潔に表すことができます．
 
 **以下では単に$\tilde{\bm{x}}$を$\bm{x}$，$\tilde{\bm{w}}$を$\bm{w}$と表記します．**
+また，クラスラベルを$y_i \in \{-1, 1\}$とします．
 
 
 
