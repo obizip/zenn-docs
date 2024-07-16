@@ -86,7 +86,7 @@ $$\begin{align*}
 	+ \frac{1}{n}\sum^n_{i=1} \max\left\{0, 1-y_i\left\langle\bm{\alpha}, \bm{k}_i\right\rangle\right\}
 \end{align*}$$
 
-よって経験リスク$R$の勾配は計算できます。
+経験リスク$R$の勾配は次のように計算できます。
 
 $$\begin{align*}
     \nabla R(\bm{\alpha}) & = \lambda K \bm{\alpha}
