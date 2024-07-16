@@ -19,6 +19,9 @@ published: true
 @[card](https://github.com/obizip/simplesvm)
 カーネル関数を取り入れたソフトマージンSVMであるカーネルSVMは次回実装します。
 
+カーネルSVMの記事はこちらにあります。
+@[card](https://zenn.dev/obizip/articles/2024-07-05-kernel_svm)
+
 ## SVMのざっくりとした理論
 <!-- $n$個の特徴量$\bm{x}_i \in \mathbb{R}^d$とクラスラベル$y_i \in \{-1, 1\}$ -->
 特徴量$\bm{x} \in \mathbb{R}^d$と重み$\bm{w} \in \mathbb{R}^d$とバイアス$b \in \mathbb{R}$に対して、次のような一次関数を考えます。
@@ -366,3 +369,6 @@ plt.plot(X[:, 0], - (w[0] * X[:, 0] + w[2]) / w[1])
 
 このように、上で扱った一次関数で分離するSVM(線形SVM)では限界があります。
 この限界を解消するために、カーネル関数を用いたSVM(カーネルSVM)があります。この実装は次回の記事で紹介したいと思います。
+
+次回のカーネルSVMの記事はこちらにあります。
+@[card](https://zenn.dev/obizip/articles/2024-07-05-kernel_svm)

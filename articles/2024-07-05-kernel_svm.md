@@ -12,6 +12,8 @@ published: true
 - 計算速度はscikit-learnのSVCのような工夫されたアルゴリズムには及びません。
 
 ## 本記事が実装するSVM
+前回の線形SVMの記事はこちらです。
+@[card](https://zenn.dev/obizip/articles/2024-07-04-linear_svm)
 前回の線形SVMの内容を前提として進めたいと思います。
 2クラス分類を行う、カーネルSVMの実装を行います。
 実装はこちらにあります。
